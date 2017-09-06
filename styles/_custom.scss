@@ -1,11 +1,65 @@
-h1 {
-  font-size: 48px;
-  font-weight: 300;
-  margin: 300px 0 20px 0;
+#navbar-top{
+  background: transparent;
+  position: absolute;
 }
 
-.lead {
-  font-size: 21px;
-  font-weight: 200;
-  margin-bottom: 20px;
+.banner{
+  background: url('/img/banner-bg.png');
+  background-position: top center;
+  height: 800px;
+  padding: 160px 0;
+  color: #fff;
+
+  .container{
+    padding: 0 20px;
+  }
+
+  h1{
+    color: #fff;
+    font-size: 68px;
+    font-weight: bold;
+    margin: 0;
+  }
+  h2{
+    color: #fff;
+    font-size: 38px;
+    margin: 0;
+  }
+  p{
+    padding: 10px 0;
+    width: 400px;
+  }
+  .octo{
+    padding: 20px;
+  }
+}
+
+#partners{
+  img{
+    height: 70px;
+    display: inline-block;
+    padding: 10px;
+    opacity: 0.6;
+  }
+}
+
+@keyframes octo-oko-anim {
+0% {opacity:0;}
+2% {opacity:1;}
+4% {opacity:0;}
+100% {opacity:0;}
+}
+@keyframes octo-chapadla-anim {
+0% {transform:skewX(10deg) skewY(2deg);}
+50% {transform:skewX(-10deg) skewY(-2deg);}
+100% {transform:skewX(10deg) skewY(2deg);}
+}
+.octo-oko {
+  opacity:0;
+  transform-origin:top;
+  animation: octo-oko-anim 5s infinite ease-in;
+}
+.octo-chapadla {
+  transform-origin:center;
+  animation: octo-chapadla-anim 1s infinite ease-in;
 }
