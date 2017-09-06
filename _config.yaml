@@ -1,0 +1,8 @@
+permalink: pretty
+
+sass:
+  style: :compressed
+  sass_dir: styles/lib/_sass
+
+exclude:
+  - styles/lib
