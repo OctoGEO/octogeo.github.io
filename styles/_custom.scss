@@ -69,6 +69,14 @@
   }
 }
 
+.bg-gradient {
+  background: rgb(18,132,244);
+  background: -moz-linear-gradient(-45deg, rgba(18,132,244,1) 0%, rgba(32,124,202,1) 31%, rgba(3,62,145,1) 70%, rgba(34,82,137,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(18,132,244,1) 0%,rgba(32,124,202,1) 31%,rgba(3,62,145,1) 70%,rgba(34,82,137,1) 100%);
+  background: linear-gradient(135deg, rgba(18,132,244,1) 0%,rgba(32,124,202,1) 31%,rgba(3,62,145,1) 70%,rgba(34,82,137,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#1284f4', endColorstr='#225289',GradientType=1 );
+}
+
 #partners {
   img {
     height: 70px;
