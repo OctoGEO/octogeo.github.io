@@ -277,7 +277,7 @@ $navsidebtn-bg: transparent;
 
 /* Sticky footer */
 $footer-color: #868d97;
-$footer-color-bg: #374045;
+$footer-color-bg: transparent;
 $footer-link-color: #868d97;
 $footer-link-hover-color: darken(#fff, 10%);
 $footer-link-hover-decoration: none;
@@ -285,8 +285,8 @@ $footer-height: 80px;
 $footer-fontsize: 32px;
 $footer-padding: 24px 20px 16px 20px;
 $footer-fontweight: bold;
-$footer-border-color: transparent;
-$footer-bordertop-size: 0;
+$footer-border-color: $color-gray-light;
+$footer-bordertop-size: 1px;
 
 /* mapcontrols */
 $map-control-offset-topbottom: 20px;
