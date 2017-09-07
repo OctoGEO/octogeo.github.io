@@ -21,7 +21,7 @@
   background: url('/img/banner-bg.png');
   background-position: top center;
   height: 800px;
-  padding: 160px 0 60px 0;
+  padding: 160px 0 60px;
   color: #fff;
 
   .container {
@@ -49,16 +49,19 @@
     padding: 20px;
   }
 
-  .banner-mapsbg{
+  .banner-mapsbg {
     background: url('/img/maps-banner-3.png');
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 1500px auto;
     padding-bottom: 80px;
   }
+}
+@media(max-width: 1000px) {
+  .banner {
+    padding: 120px 0 60px;
 
-  @media(max-width: 1000px){
-    .banner-mapsbg{
+    .banner-mapsbg {
       background: transparent;
       text-align: center;
       padding-bottom: 0;
