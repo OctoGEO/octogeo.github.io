@@ -90,7 +90,7 @@ $grid-margin-y: 0;
 
 /* Helpers */
 /* Corners for rounding */
-$radius-all: 2px;
+$radius-all: 3px;
 $radius-top-left: $radius-all;
 $radius-top-right: $radius-all;
 $radius-bottom-right: $radius-all;
@@ -113,7 +113,7 @@ $btn-small-scale: 0.6;
 /* butons colection */
 $btns: (
 //name, color, background-color, hover color, hover background
-("", #ffffff, linear-gradient($color-primary, darken($color-primary, 5%)), #ffffff, linear-gradient(darken($color-primary, 3%), darken($color-primary, 7%))),
+("", #ffffff,  #3d5afe, #ffffff, linear-gradient(darken($color-primary, 3%), darken($color-primary, 7%))),
 ("-secondary", #ffffff, linear-gradient($color-secondary, darken($color-secondary, 5%)), #ffffff, linear-gradient(darken($color-secondary, 3%), darken($color-secondary, 7%))),
 ("-gray", #fff, $color-gray, #fff, darken($color-gray, 5%)),
 ("-gray-dark", $color-gray-light, linear-gradient($color-gray-dark, darken($color-gray-dark, 5%)), $color-gray-light, linear-gradient(darken($color-gray-dark, 5%), darken($color-gray-dark, 10%))),
