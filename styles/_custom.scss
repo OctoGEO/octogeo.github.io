@@ -125,4 +125,5 @@
 .octo-chapadla {
   transform-origin: center;
   animation: octo-chapadla-anim 1s infinite ease-in;
+  transform-box: fill-box;
 }
