@@ -18,7 +18,9 @@
 }
 
 .banner {
-  background: url('/img/banner-bg.png');
+  background: rgb(0,78,142);
+  background-image: url('/img/banner-bg.png');
+  background-image: url('/img/banner-bg.png'), linear-gradient(135deg, rgba(0,78,142,1) 0%,rgba(18,132,245,1) 70%,rgba(18,132,245,1) 70%);
   background-position: top center;
   height: 800px;
   padding: 160px 0 60px;
