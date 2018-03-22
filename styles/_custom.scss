@@ -1,85 +1,40 @@
-#navbar-top {
-  background: transparent;
-  position: absolute;
+$banner-height: 600px;
 
-  a.title {
-    padding-left: 95px;
-
-    &:before {
-      content: '';
-      background: url('/img/octogeo-logo-white.png');
-      background-size: 60px 60px;
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      margin: -25px 0 0 -75px;
-    }
-  }
+body {
+  background-color: #000;
+  background-image: url('/img/bg.jpg');
+  background-size: auto $banner-height;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: $banner-height;
 }
 
 .banner {
-  background: rgb(0,78,142);
-  background-image: url('/img/banner-bg.png');
-  background-image: url('/img/banner-bg.png'), linear-gradient(135deg, rgba(0,78,142,1) 0%,rgba(18,132,245,1) 70%,rgba(18,132,245,1) 70%);
-  background-position: top center;
-  height: 800px;
-  padding: 160px 0 60px;
-  color: #fff;
-
-  .container {
-    padding: 0 20px;
-  }
+  height: $banner-height;
 
   h1 {
+    font-size: 80px;
+    font-weight: 600;
     color: #fff;
-    font-size: 68px;
-    font-weight: bold;
-    margin: 0;
+    margin-top: 225px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
   }
 
-  h2 {
-    color: #fff;
-    font-size: 38px;
-    margin: 0;
-  }
-
-  p {
-    padding: 10px 0;
-  }
-
-  .octo {
-    padding: 20px;
-  }
-
-  .banner-mapsbg {
-    background: url('/img/maps-banner-3.png');
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 1500px auto;
-    padding-bottom: 80px;
-  }
-}
-@media(max-width: 1000px) {
-  .banner {
-    padding: 120px 0 60px;
-
-    .banner-mapsbg {
-      background: transparent;
-      text-align: center;
-      padding-bottom: 0;
-    }
+  a.btn {
+    margin-top: 40px;
   }
 }
 
-.bg-gradient {
-  background: rgb(18,132,244);
-  background: -moz-linear-gradient(-45deg, rgba(18,132,244,1) 0%, rgba(32,124,202,1) 31%, rgba(3,62,145,1) 70%, rgba(34,82,137,1) 100%);
-  background: -webkit-linear-gradient(-45deg, rgba(18,132,244,1) 0%,rgba(32,124,202,1) 31%,rgba(3,62,145,1) 70%,rgba(34,82,137,1) 100%);
-  background: linear-gradient(135deg, rgba(18,132,244,1) 0%,rgba(32,124,202,1) 31%,rgba(3,62,145,1) 70%,rgba(34,82,137,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#1284f4', endColorstr='#225289',GradientType=1 );
+#navbar-top {
+  position: absolute;
 }
 
-.btn{
+b,
+strong {
+  color: #424242;
+}
+
+.btn {
   box-shadow: 0 1px 2px rgba(0,1,1,.15);
 }
 
@@ -90,46 +45,4 @@
     padding: 10px;
     opacity: 0.6;
   }
-}
-@keyframes octo-oko-anim {
-  0% {
-    opacity: 0;
-  }
-
-  2% {
-    opacity: 1;
-  }
-
-  4% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes octo-chapadla-anim {
-  0% {
-    transform: skewX(10deg) skewY(2deg);
-  }
-
-  50% {
-    transform: skewX(-10deg) skewY(-2deg);
-  }
-
-  100% {
-    transform: skewX(10deg) skewY(2deg);
-  }
-}
-
-.octo-oko {
-  opacity: 0;
-  transform-origin: top;
-  animation: octo-oko-anim 5s infinite ease-in;
-}
-
-.octo-chapadla {
-  transform-origin: center;
-  animation: octo-chapadla-anim 1s infinite ease-in;
-  transform-box: fill-box;
 }
