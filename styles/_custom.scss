@@ -46,3 +46,26 @@ strong {
     opacity: 0.6;
   }
 }
+
+.popup.earth{
+  width: 90%;
+  margin-left: -45%;
+  height: 90%;
+  top: 5%;
+}
+
+#earth-map {
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  background-color: #000;
+  background-image: url('/img/stars.jpg');
+  position: absolute !important;
+}
+
+.popup .popup-close{
+  color: #fff;
+  font-size: 30px;
+  line-height: 30px;
+}

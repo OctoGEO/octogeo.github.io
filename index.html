@@ -9,6 +9,7 @@
   <meta name="keywords" content="OctoGEO, maps, geodata, development">
   <meta name="description" content="An experienced team of software engineers specialized in development of online mapping applications and processing of geospatial data.">
   <link href="/styles/base.css?t={{ site.time | date: '%s' }}" rel="stylesheet">
+  <script src="http://www.webglearth.com/v2/api.js"></script>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>OctoGEO</title>
@@ -26,7 +27,7 @@
   <div class="row banner">
     <div class="col12 center">
       <h1>OCTOGEO</h1>
-      <a class="btn" href="#globe">Explore our planet</a>
+      <a id="earth-open" class="btn" href="#globe">Explore our planet</a>
     </div>
   </div>
 
@@ -110,7 +111,56 @@
      <p>&copy; 2017 OctoGEO s.r.o., Halkova 34, 614 00 Brno, Czech republic. Tel: +420 530 332 976. ICO: 06316964, E-mail: info@octogeo.com</p>
    </div>
   </div>
+
+  <div class="popup-bg hidden"></div>
+  <div class="popup earth hidden">
+    <div id="earth-map"></div>
+    <div class="popup-close">X</div>
+  </div>
   <script>
+  var earth;
+  var popup = document.querySelector('.popup');
+  var popupBg = document.querySelector('.popup-bg');
+
+    function openEarth(){
+      popup.classList.toggle('hidden');
+      popupBg.classList.toggle('hidden');
+      earth.handleResize();
+      earth.resumeRendering();
+      if(popup.classList.contains('hidden')){
+        window.location.hash = '';
+        earth.pauseRendering();
+      } else {
+        earth.panInsideBounds(
+          [[47.73, 12.09], [51.06, 22.56]],
+          {heading: 40, tilt: 40, duration: 5}
+        );
+      }
+    }
+
+    function initMap() {
+      var satelliteURL = '{{ site.maps.domain }}/data/satellite/{z}/{x}/{y}.jpg?key={{ site.maps.key }}';
+      var options = {atmosphere: true, center: [0, 0], zoom: 5};
+
+      earth = new WE.map('earth-map', options);
+      WE.tileLayer(satelliteURL, {
+        minZoom: 0,
+        maxZoom: 12,
+        attribution: 'OpenMapTiles . OCTOGEO'
+      }).addTo(earth);
+    }
+
+    initMap();
+    earth.pauseRendering();
+
+    document.getElementById('earth-open').addEventListener('click', openEarth);
+    document.querySelector('.popup-close').addEventListener('click', openEarth);
+    popupBg.addEventListener('click', openEarth);
+    if(window.location.hash == '#globe'){
+      openEarth();
+    }
+
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
