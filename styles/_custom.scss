@@ -18,13 +18,18 @@ body {
 .banner {
   height: $banner-height;
 
+  .col12 {
+    background: linear-gradient(to bottom, #151e34 0%, #151e34 20%, rgba(21,30,52,0.7) 70%, rgba(21,30,52,0) 100%);
+  }
+
   h1 {
     font-size: 80px;
     font-weight: 600;
     color: #fff;
-    margin-top: 225px;
+    margin-top: 200px;
     text-shadow: 0 0 30px #151e34;
     transition: all 0.3s ease;
+    z-index: 95;
   }
 
   a.btn {
@@ -43,6 +48,14 @@ body {
 
 #navbar-top {
   position: absolute;
+
+  .container{
+    border-bottom: 2px solid #122c4e;
+  }
+
+  a {
+    text-transform: uppercase;
+  }
 }
 
 b,
