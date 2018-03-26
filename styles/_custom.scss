@@ -3,7 +3,7 @@ $banner-height: 600px;
 body {
   background-color: #000;
   background-image: url('/img/bg.jpg');
-  background-size: auto $banner-height;
+  background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   height: $banner-height;
@@ -22,13 +22,13 @@ body {
     font-weight: 600;
     color: #fff;
     margin-top: 225px;
-    text-shadow: 0 0 30px #000;
+    text-shadow: 0 0 30px #151e34;
     transition: all 0.3s ease;
   }
 
   a.btn {
     margin-top: 40px;
-    box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 20px #151e34;
   }
 }
 
