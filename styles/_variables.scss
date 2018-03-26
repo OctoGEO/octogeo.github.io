@@ -256,7 +256,7 @@ $navbar-top-link-hover-color: lighten($color-primary, 10%);
 $navbar-top-link-hover-bgcolor: transparent;
 $navbar-top-link-active-borderbottom: 4px solid #fff;
 
-$navbar-top-mobile-btn-color: #ffffff;
+$navbar-top-mobile-btn-color: $text-color;
 $navbar-top-mobile-bg: #ffffff;
 $navbar-top-mobile-border: none;
 $navbar-top-mobile-shadow: 2px 2px 20px -1px rgba(0,0,0,0.75);

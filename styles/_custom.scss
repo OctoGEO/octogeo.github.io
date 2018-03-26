@@ -18,11 +18,20 @@ body {
     color: #fff;
     margin-top: 225px;
     text-shadow: 0 0 30px #000;
+    transition: all 0.3s ease;
   }
 
   a.btn {
     margin-top: 40px;
     box-shadow: 0 0 20px #000;
+  }
+}
+
+@media(max-width: 600px) {
+  .banner{
+    h1{
+      font-size: 60px;
+    }
   }
 }
 
