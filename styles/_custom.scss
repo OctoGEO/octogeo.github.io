@@ -12,6 +12,7 @@ body {
 .stop-scroll {
   height: 100%;
   overflow: hidden;
+  touch-action: none;
 }
 
 .banner {
