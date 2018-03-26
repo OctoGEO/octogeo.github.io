@@ -27,7 +27,7 @@
   <div class="row banner">
     <div class="col12 center">
       <h1>OCTOGEO</h1>
-      <a id="earth-open" class="btn" href="#globe">Explore our planet</a>
+      <a id="earth-open" class="btn" href="#planet">Explore our planet</a>
     </div>
   </div>
 
@@ -139,21 +139,23 @@
         window.location.hash = '';
         earth.pauseRendering();
       } else {
-        earth.panInsideBounds(
-          [[47.73, 12.09], [51.06, 22.56]],
-          {heading: 40, tilt: 40, duration: 5}
-        );
+        setTimeout(function(){
+          earth.panInsideBounds(
+            [[50.0856020688, 14.4116705506], [50.0868718827, 14.4145343451]],
+            {heading: 0, tilt: 0, duration: 10}
+          );
+        }, 1000)
       }
     }
 
     function initMap() {
-      var satelliteURL = '{{ site.maps.domain }}/data/satellite/{z}/{x}/{y}.jpg?key={{ site.maps.key }}';
+      var satelliteURL = '{{ site.maps.domain }}/c/octogeo/styles/satellite-aerial-hybrid/{z}/{x}/{y}.jpg?key={{ site.maps.key }}';
       var options = {atmosphere: true, center: [0, 0], zoom: 5};
 
       earth = new WE.map('earth-map', options);
       WE.tileLayer(satelliteURL, {
         minZoom: 0,
-        maxZoom: 12,
+        maxZoom: 22,
         attribution: 'OpenMapTiles . OCTOGEO'
       }).addTo(earth);
     }
@@ -164,7 +166,7 @@
     document.getElementById('earth-open').addEventListener('click', openEarth);
     document.querySelector('.popup-close').addEventListener('click', openEarth);
     popupBg.addEventListener('click', openEarth);
-    if(window.location.hash == '#globe'){
+    if(window.location.hash == '#planet'){
       openEarth();
     }
 
