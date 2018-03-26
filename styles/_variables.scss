@@ -1,6 +1,6 @@
 /* Colors */
-$color-primary: #1ba1e2;
-$color-secondary: #1ba1e2;
+$color-primary: #0081ee;
+$color-secondary: #0081ee;
 
 $color-gray-dark: #424242;
 $color-gray: #777;
@@ -23,14 +23,14 @@ $link-color: $color-primary;
 $link-hover-color: lighten($color-primary, 8%);
 
 /* Fonts */
-$font-primary: 'Montserrat', sans-serif;
+$font-primary: 'Lato', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
 $font-monospace: Menlo, Monaco, 'Courier New', monospace;
 $font-icon: Menlo, Monaco, 'Courier New', monospace;
-$font-size: 16px !default;
+$font-size: 17px !default;
 
 /* Line height*/
-$line-height: 1.5 !default;
+$line-height: 1.6 !default;
 $line-height-computed: floor(($font-size * $line-height)) !default;
 
 /* Headings */
@@ -231,7 +231,7 @@ $box-shadow: 0px 1px 1px 0px rgba(200,204,210,1);
 $box-radius: $border-radius;
 
 /* Top navbar */
-$navbar-top-height: 80px;
+$navbar-top-height: 65px;
 $navbar-top-small-height: 48px;
 $navbar-top-border-bottom: 0;
 $navbar-top-margin-bottom: 20px;
@@ -251,7 +251,7 @@ $navbar-top-link-color: $color-primary;
 $navbar-top-link-size: 16px;
 $navbar-top-link-font: $font-primary;
 $navbar-top-link-fontweight: 600;
-$navbar-top-link-padding: 34px 24px;
+$navbar-top-link-padding: 25px;
 $navbar-top-link-hover-color: lighten($color-primary, 10%);
 $navbar-top-link-hover-bgcolor: transparent;
 $navbar-top-link-active-borderbottom: 4px solid #fff;

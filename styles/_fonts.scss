@@ -1,5 +1,10 @@
 /* Fonts  */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Montserrat:400,500&subset=latin-ext');
+
+body{
+  font-weight: 300;
+}
+
 @font-face {
   font-family: 'icons';
   src:
