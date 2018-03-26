@@ -160,14 +160,15 @@
     }
 
     function initMap() {
-      var satelliteURL = '{{ site.maps.domain }}/c/octogeo/styles/satellite-aerial-hybrid/{z}/{x}/{y}.jpg?key={{ site.maps.key }}';
+      var satelliteURL = '{{ site.maps.domain }}/c/octogeo/styles/satellite-aerial-hybrid/{z}/{x}/{y}@2x.png?key={{ site.maps.key }}';
       var options = {atmosphere: true, center: [0, 0], zoom: 5};
 
       earth = new WE.map('earth-map', options);
       WE.tileLayer(satelliteURL, {
         minZoom: 0,
         maxZoom: 22,
-        attribution: 'OpenMapTiles . OCTOGEO'
+        attribution: 'OpenMapTiles . OCTOGEO',
+        tileSize: 512
       }).addTo(earth);
     }
 
