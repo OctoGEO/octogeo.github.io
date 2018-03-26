@@ -19,6 +19,13 @@ h1, h2, h3, h4, h5, h6{
   touch-action: none;
 }
 
+#logo-blue{
+  width: 150px;
+  height: auto;
+  margin-top: 35px;
+  margin-left: 15px;
+}
+
 .banner {
   height: $banner-height;
 
@@ -26,14 +33,16 @@ h1, h2, h3, h4, h5, h6{
     background: linear-gradient(to bottom, #151e34 0%, #151e34 20%, rgba(21,30,52,0.7) 35%, rgba(21,30,52,0) 75%)
   }
 
-  h1 {
-    font-size: 80px;
-    font-weight: 600;
-    color: #fff;
+  #logo-white {
+    width: 460px;
+    height: auto;
     margin-top: 200px;
-    text-shadow: 0 0 30px #151e34;
     transition: all 0.3s ease;
     z-index: 95;
+  }
+
+  h2{
+    text-shadow: 0 0 20px #151e34;
   }
 
   a.btn {
@@ -42,10 +51,14 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+#logo-white{
+
+}
+
 @media(max-width: 600px) {
   .banner{
     h1{
-      font-size: 60px;
+      width: 300px;
     }
   }
 }
