@@ -9,6 +9,11 @@ body {
   height: $banner-height;
 }
 
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .banner {
   height: $banner-height;
 

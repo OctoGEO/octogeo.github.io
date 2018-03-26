@@ -147,6 +147,7 @@
       if(popup.classList.contains('hidden')){
         window.location.hash = '';
         earth.pauseRendering();
+        document.body.classList.remove('stop-scroll');
       } else {
         setTimeout(function(){
           earth.panInsideBounds(
@@ -154,6 +155,7 @@
             {heading: 0, tilt: 0, duration: 10}
           );
         }, 1000)
+        document.body.classList.add('stop-scroll');
       }
     }
 
