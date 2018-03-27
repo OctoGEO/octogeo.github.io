@@ -145,12 +145,14 @@
         window.location.hash = '';
         earth.pauseRendering();
         document.body.classList.remove('stop-scroll');
+        window.onpopstate = function() {};
       } else {
         setTimeout(function(){
           earth.panInsideBounds(
             [[50.0856020688, 14.4116705506], [50.0868718827, 14.4145343451]],
             {heading: 0, tilt: 0, duration: 10}
           );
+          window.onpopstate = function() {window.location = '/';};
         }, 1000)
         document.body.classList.add('stop-scroll');
       }
