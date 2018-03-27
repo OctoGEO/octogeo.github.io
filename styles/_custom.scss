@@ -19,13 +19,6 @@ h1, h2, h3, h4, h5, h6{
   touch-action: none;
 }
 
-#logo-blue{
-  width: 150px;
-  height: auto;
-  margin-top: 35px;
-  margin-left: 15px;
-}
-
 .banner {
   height: $banner-height;
 
@@ -51,13 +44,9 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
-#logo-white{
-
-}
-
 @media(max-width: 600px) {
   .banner{
-    h1{
+    #logo-white{
       width: 300px;
     }
   }
