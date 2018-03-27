@@ -157,7 +157,7 @@
     }
 
     function initMap() {
-      var satelliteURL = '{{ site.maps.domain }}/c/octogeo/styles/satellite-aerial-hybrid/{z}/{x}/{y}@2x.png?key={{ site.maps.key }}';
+      var satelliteURL = '{{ site.maps.domain }}/c/octogeo/styles/satellite-aerial-hybrid/{z}/{x}/{y}@2x.jpg?key={{ site.maps.key }}';
       var options = {atmosphere: true, center: [0, 0], zoom: 5};
 
       earth = new WE.map('earth-map', options);
